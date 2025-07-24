@@ -11,8 +11,9 @@ subscriptionRouter.get("/:id", (req, res) => {
 subscriptionRouter.post("/", (req, res) => {
   res.send({ title: "CREATE subscription" });
 });
+
 subscriptionRouter.put("/", (req, res) => {
-  res.send({ title: "Update subscription" });
+res.send({ title: "Update subscription" }); 
 });
 subscriptionRouter.get("/user/:id", (req, res) => {
   res.send({ title: "GET all user subscriptions" });
