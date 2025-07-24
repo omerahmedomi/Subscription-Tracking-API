@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema(
       minLength: 6,
     },
   },
-  { timestamps: true }
+  { timestamps: true },
 ); // to have createdAt and updateAt times
 
 const User=mongoose.model('User',userSchema)
