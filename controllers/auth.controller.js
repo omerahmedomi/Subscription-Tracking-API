@@ -74,7 +74,7 @@ export const signIn = async (req, res, next) => {
 
     //user is now authenticated
 
-    const token = jwt.sign({ id: user._id }, JWT_SECRET, {
+    const token = jwt.sign({ userId: user._id }, JWT_SECRET, {
       expiresIn: JWT_EXPIRES_IN,
     });
 
@@ -90,7 +90,7 @@ export const signIn = async (req, res, next) => {
     next(error);
   }
 
-  // const token= jwt.verify(,JWT_SECRET,)
+  
 };
 
 export const signOut = async (req, res, next) => {};
