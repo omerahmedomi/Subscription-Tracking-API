@@ -6,12 +6,14 @@ import authRouter from "./routes/auth.routes.js";
 import connectToDatabase from "./database/mongodb.js";
 import cookieParser from "cookie-parser";
 import errorMiddleware from "./middlewares/error.middleware.js";
+import arcjetMiddleware from "./middlewares/arcjet.middleware.js";
 
 const app = express();
 
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(cookieParser())//reads cookies from incoming request
+app.use(arcjetMiddleware)
 
 
 
