@@ -16,7 +16,7 @@ const subscriptionSchema = new mongoose.Schema(
     },
     currency: {
       type: String,
-      enum: ["USD,EUR,GBP"],
+      enum: ["USD", 'EUR', 'GBP'],
       default: "USD",
     },
     frequency: {
@@ -58,7 +58,6 @@ const subscriptionSchema = new mongoose.Schema(
     },
     renewalDate: {
       type: Date,
-      required: true,
       validate: {
         validator: function (value) {
           return value > this.startDate;
@@ -66,12 +65,12 @@ const subscriptionSchema = new mongoose.Schema(
         message: "Renewal date must be after the start date",
       },
     },
-    user:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'User',
-        required:true,
-        index:true,
-    }
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+      index: true,
+    },
   },
   { timestamps: true }
 );

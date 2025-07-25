@@ -28,4 +28,38 @@ GET http://localhost:5500/api/v1/users
 ### get a specific user
 
 GET http://localhost:5500/api/v1/users/6882536a71bf3586541ac4e7
-Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODgyNTM2YTcxYmYzNTg2NTQxYWM0ZTciLCJpYXQiOjE3NTMzODQ3MTYsImV4cCI6MTc1MzQ3MTExNn0.KG903FpKQMYZEiHjucDaeleT2YmpioRTPeU5RU0WmAE
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODgyNTM2YTcxYmYzNTg2NTQxYWM0ZTciLCJpYXQiOjE3NTM0MjgxMDMsImV4cCI6MTc1MzUxNDUwM30.FfXMK0sLQzNJ_UvehnZ7T9ELPDOu-dKZ-1qhGlUyVEw
+
+### create subscription
+POST http://localhost:5500/api/v1/subscriptions
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODgyNTM2YTcxYmYzNTg2NTQxYWM0ZTciLCJpYXQiOjE3NTM0MjgxMDMsImV4cCI6MTc1MzUxNDUwM30.FfXMK0sLQzNJ_UvehnZ7T9ELPDOu-dKZ-1qhGlUyVEw
+Content-Type: application/json
+
+{
+  "name": "Javascript Mastery Elite Membership",
+  "price": 139.00,
+  "currency": "USD",
+  "frequency": "monthly",
+  "category": "entertainment",
+  "startDate": "2025-01-20T00:00:00.000Z",
+  "paymentMethod": "Credit Card"
+}
+
+### GET single user subscription
+GET http://localhost:5500/api/v1/subscriptions/user/6882536a71bf3586541ac4e7
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODgyNTM2YTcxYmYzNTg2NTQxYWM0ZTciLCJpYXQiOjE3NTM0MjgxMDMsImV4cCI6MTc1MzUxNDUwM30.FfXMK0sLQzNJ_UvehnZ7T9ELPDOu-dKZ-1qhGlUyVEw
+
+### GET all subscriptions
+GET http://localhost:5500/api/v1/subscriptions
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODgyNTM2YTcxYmYzNTg2NTQxYWM0ZTciLCJpYXQiOjE3NTM0MjgxMDMsImV4cCI6MTc1MzUxNDUwM30.FfXMK0sLQzNJ_UvehnZ7T9ELPDOu-dKZ-1qhGlUyVEw
+
+### GET subscription details
+GET http://localhost:5500/api/v1/subscriptions/68832ad24cdd998edd1327bc
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODgyNTM2YTcxYmYzNTg2NTQxYWM0ZTciLCJpYXQiOjE3NTM0MjgxMDMsImV4cCI6MTc1MzUxNDUwM30.FfXMK0sLQzNJ_UvehnZ7T9ELPDOu-dKZ-1qhGlUyVEw
+
+
+
+
+
+
+
